@@ -1,4 +1,4 @@
-mport mongoose from "mongoose";
+import mongoose from "mongoose";
 
 const startDatabase =  async () => {
   let dbConnection;
