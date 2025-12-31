@@ -16,14 +16,17 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/server.js"
+      "dest": "/Backend/server.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/frontend/index.html"
+      "src": "/((?!api/).*)",
+      "dest": "/Frontend/dist/$1"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/Frontend/dist/index.html"
     }
   ]
 }
-
-
-
