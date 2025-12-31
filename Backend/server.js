@@ -10,20 +10,15 @@ dotenv.config();
 
 const app = express();
 
-
 app.use(express.json());
 app.use(cookieParser());
 
-
-if (process.env.NODE_ENV !== "production") {
-  app.use(
-    cors({
-      origin: process.env.FRONTEND_URL || "http://localhost:5173",
-      credentials: true,
-    })
-  );
-}
-
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 app.use(async (req, res, next) => {
   try {
@@ -35,22 +30,16 @@ app.use(async (req, res, next) => {
   }
 });
 
-
 app.use("/api/auth", authRoutes);
 app.use("/api/flight", flightRoutes);
-
 
 app.get("/api/health", (req, res) => {
   res.json({ status: "API is running" });
 });
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running locally on port ${PORT}`);
+});
 
-if (process.env.NODE_ENV !== "production") {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log(`Server running locally on port ${PORT}`);
-  });
-}
-
-module.exports = app;
-
+export default app;
