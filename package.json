@@ -1,6 +1,10 @@
 {
+  "name": "skypath-flights",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "AnsariMohammad",
+  "private": true,
   "scripts": {
     "build": "cd Frontend && npm install && npm run build"
   }
 }
-
