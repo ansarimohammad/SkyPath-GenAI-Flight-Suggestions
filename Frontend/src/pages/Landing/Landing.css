@@ -1,0 +1,511 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  padding: 60px 20px 100px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(30, 58, 138, 0.92), rgba(29, 78, 216, 0.85));
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+}
+
+.hero-heading {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.15;
+}
+
+.hero-subheading {
+  font-size: 19px;
+  margin-bottom: 30px;
+  color: rgba(239, 246, 255, 0.95);
+  line-height: 1.6;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+.feature-item h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: rgba(191, 219, 254, 1);
+  line-height: 1.5;
+}
+
+/* Flight form card */
+.flight-form-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  color: #1f2937;
+}
+
+.form-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.flight-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 13px;
+  width: 19px;
+  height: 19px;
+  color: #9ca3af;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Features section */
+.features-section {
+  padding: 70px 20px;
+  background-color: #f9fafb;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.section-subheading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.feature-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Steps section */
+.steps-section {
+  padding: 70px 20px;
+  background-color: white;
+}
+
+.steps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 45px;
+}
+
+.step-item {
+  text-align: center;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.step-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.step-item p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 15px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* CTA section */
+.cta-section {
+  position: relative;
+  padding: 70px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37, 99, 235, 0.88);
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.cta-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cta-content p {
+  font-size: 19px;
+  margin-bottom: 30px;
+  color: rgba(191, 219, 254, 1);
+}
+
+.cta-btn {
+  background-color: white;
+  color: #2563eb;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: white;
+  padding: 50px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.footer-logo span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #93c5fd;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 35px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .hero-heading {
+    font-size: 38px;
+  }
+
+  .hero-subheading {
+    font-size: 17px;
+  }
+
+  .section-heading {
+    font-size: 32px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-heading {
+    font-size: 62px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-heading {
+    font-size: 68px;
+  }
+
+  .section-heading {
+    font-size: 46px;
+  }
+
+  .cta-content h2 {
+    font-size: 48px;
+  }
+}

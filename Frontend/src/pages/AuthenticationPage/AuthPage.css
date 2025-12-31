@@ -1,0 +1,107 @@
+
+.auth-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+
+.tab-navigation {
+  display: flex;
+  background: #f3f4f6;
+  padding: 0;
+  position: relative;
+}
+
+.nav-tab {
+  flex: 1;
+  padding: 20px;
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-tab:hover {
+  color: #374151;
+}
+
+.nav-tab.active-tab {
+  color: #3b82f6;
+}
+
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: #3b82f6;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.tab-indicator.move-right {
+  transform: translateX(100%);
+}
+
+
+.form-content {
+  padding: 35px 30px;
+  min-height: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  .auth-card {
+    max-width: 100%;
+  }
+
+  .form-content {
+    padding: 30px 25px;
+    min-height: 400px;
+  }
+
+  .nav-tab {
+    padding: 18px 15px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth-page-wrapper {
+    padding: 15px;
+  }
+
+  .form-content {
+    padding: 25px 20px;
+    min-height: 350px;
+  }
+
+  .nav-tab {
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+
+  .auth-card {
+    border-radius: 16px;
+  }
+}
