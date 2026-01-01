@@ -161,6 +161,6 @@ Return ONLY valid, clean JSON with this exact structure (no explanations, no mar
     const json = JSON.parse(text);
     return json;
   } catch (e) {
-    throw new Error("Failed to parse Gemini response as JSON");
+    throw new Error("Make sure your Gemini API key is properly configured in the .env file.");
   }
 };
