@@ -161,6 +161,6 @@ Return ONLY valid, clean JSON with this exact structure (no explanations, no mar
     const json = JSON.parse(text);
     return json;
   } catch (e) {
-    throw new Error("Make sure your Gemini API key is properly configured in the .env file.");
+    throw new Error("Service temporarily unavailable due to API rate limits. Please contact the administrator.");
   }
 };
